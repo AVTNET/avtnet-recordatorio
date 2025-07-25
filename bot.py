@@ -34,6 +34,10 @@ def send_daily_message():
 
 scheduler.add_job(send_daily_message, 'cron', hour=SEND_HOUR, minute=SEND_MINUTE)
 
-if __name__ == '__main__':
-    logger.info("Bot iniciado. Esperando para enviar mensajes...")
-    scheduler.start()
+if __name__ == "__main__":
+    logging.info("Bot iniciado. Esperando para enviar mensajes...")
+    try:
+        scheduler.start()
+    except (KeyboardInterrupt, SystemExit):
+        logging.info("Scheduler detenido.")
+
