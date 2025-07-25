@@ -11,7 +11,7 @@ TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")  # Pega aquí el token si no usas v
 CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")  # ID del grupo donde enviar el mensaje
 TIMEZONE = pytz.timezone("Europe/Madrid")
 SEND_HOUR = 18
-SEND_MINUTE = 10
+SEND_MINUTE = 40
 
 MESSAGE = (
     "Buenos días, recordaros que es de obligado cumplimiento el registro horario desde la app de iaccesos. "
