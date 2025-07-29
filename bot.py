@@ -51,7 +51,7 @@ scheduler.add_job(send_stock_reminder, 'cron', day_of_week='fri', hour=17, minut
 
 if __name__ == "__main__":
     logging.info("Bot iniciado. Enviando mensaje de prueba...")
-    send_stock_reminder()  # Envío inmediato para prueba
+    
     try:
         scheduler.start()
     except (KeyboardInterrupt, SystemExit):
